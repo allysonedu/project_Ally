@@ -13,7 +13,7 @@ export const SignIn = () => {
         <img src={logo} alt="Ally" />
 
         <form>
-          <h1>Faça seu logon</h1>
+          <h1>tipo do usuario</h1>
 
           <Button type="button"> Admin </Button>
 

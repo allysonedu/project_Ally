@@ -9,10 +9,22 @@ class Secretaryrepository {
       trx('secretary').insert(payload).returning('*')
     );
   }
-  async saveTokenInDb(payload) {
+  /*  async saveTokenInDb(payload) {
     return connection.transaction(async trx =>
       trx('users_token').insert(payload).returning('token')
     );
+  }
+  */
+
+  async getUserById(userId) {
+    return connection('secretary').where({ id: userId }).first();
+  }
+
+  async updateUser(payload) {
+    return connection('secretary')
+      .update(payload)
+      .where({ id: payload.id })
+      .returning('*');
   }
 }
 

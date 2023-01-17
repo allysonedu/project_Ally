@@ -2,6 +2,8 @@ const CreateNewSecretaryService = require('../../services/CreateNewSecretaryServ
 
 const SecretaryRepository = require('../../repositories/SecretaryRepository');
 
+const UpdateUserAvatar = require('../../services/UpdateUserAvatar');
+
 const secretaryRepository = new SecretaryRepository();
 
 class SecretaryController {
@@ -18,14 +20,16 @@ class SecretaryController {
 
     return response.json({ user });
   }
-  async getAllSecretary(request, response) {
-    return response.json({ getAll: true });
-  }
-  async updateSecretary(request, response) {
-    return response.json({ update: true });
-  }
-  async deleteSecretary(request, response) {
-    return response.json({ delete: true });
+
+  async updateUserAvatar(request, response) {
+    console.log(request.file);
+    const updateAvatar = new UpdateUserAvatar(secretaryRepository);
+
+    const updatedAvatar = await updateAvatar.execute({
+      userId: request.user.id,
+      avatarFileName: request.file.filename,
+    });
+    return response.json(updatedAvatar);
   }
 }
 module.exports = SecretaryController;

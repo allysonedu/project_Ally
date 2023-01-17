@@ -4,7 +4,11 @@ const express = require('express');
 
 const Youch = require('youch');
 
+const cors = require('cors');
+
 const { errors } = require('celebrate');
+
+const uploadConfig = require('../../config/upload');
 
 require('express-async-errors');
 
@@ -15,6 +19,10 @@ const app = express();
 const port = 3333;
 
 app.use(express.json());
+
+app.use('/files', express.static(uploadConfig.directory));
+
+app.use(cors({ origin: '*' }));
 
 app.use(routes);
 
@@ -32,4 +40,4 @@ app.use(async (error, request, response, next) => {
   });
 });
 
-app.listen(3333, () => console.log(`rodando na porta ${port}`));
+app.listen(port, () => console.log(`rodando na porta ${port}`));

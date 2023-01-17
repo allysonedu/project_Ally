@@ -1,32 +1,85 @@
-import { useCallback } from 'react';
+import { useCallback, useRef } from 'react';
 
-import { FiMail, FiLock, FiArrowLeft } from 'react-icons/fi';
+import { FiMail, FiLock, FiArrowRight } from 'react-icons/fi';
 
 import { BiUser } from 'react-icons/bi';
 
-import logo from '../../assets/logo.png';
+import { useNavigate } from 'react-router-dom';
+
+import * as Yup from 'yup';
 
 import { Form } from '@unform/web';
 
-import { Container, Content, Background } from './styles';
+import logo from '../../assets/logo.png';
+
+import getValidationErrors from '../../shared/utils/getValidationErrors';
 
 import { Button, Input } from '../../shared/components';
 
-import { api } from '../../shared/services';
+import { useToast } from '../../shared/context/ToastContext';
+
+import { createUser } from '../../api/allyApi';
+
+import { Container, Content, Background } from './styles';
 
 export const SignUp = () => {
-  const handleSubmit = useCallback(async data => {
-    const response = await api.post('/users', data);
+  const formRef = useRef(null);
 
-    console.log(response);
-  }, []);
+  const navigate = useNavigate();
+
+  const { addToast } = useToast();
+
+  const handleSubmit = useCallback(
+    async data => {
+      try {
+        formRef.current.setErrors({});
+
+        console.log(data);
+
+        const schema = Yup.object().shape({
+          name: Yup.string().required('Nome Obrigatorio!'),
+          email: Yup.string()
+            .email('Digita um email válido')
+            .required('Email é obrigatorio!'),
+
+          password: Yup.string().min(6, 'Minimo de 6 caracteres!'),
+        });
+
+        await schema.validate(data, { abortEarly: false });
+
+        await createUser(data);
+
+        addToast({
+          type: 'success',
+          title: 'Usuario criado com sucesso',
+          description: 'Cadastro realizado, pode fazer seu logon ',
+        });
+
+        navigate('/login');
+      } catch (err) {
+        if (err instanceof Yup.ValidationError) {
+          const errors = getValidationErrors(err);
+
+          formRef.current.setErrors(errors);
+          return;
+        }
+
+        addToast({
+          type: 'error',
+          title: 'Erro ao cadastrar',
+          description: 'Erro no cadastro, verifique seus dados',
+        });
+      }
+    },
+    [navigate, addToast]
+  );
 
   return (
     <Container>
       <Content>
         <img src={logo} alt="Ally" />
 
-        <Form onSubmit={handleSubmit}>
+        <Form ref={formRef} onSubmit={handleSubmit}>
           <h1>Cadastra-se</h1>
 
           <Input
@@ -53,9 +106,9 @@ export const SignUp = () => {
           <Button type="submit"> Cadastrar </Button>
         </Form>
 
-        <a href="/">
-          <FiArrowLeft size={20} />
-          Ja tenho Cadastro...
+        <a href="/login">
+          <FiArrowRight size={20} />
+          Já tenho uma conta, fazer logon
         </a>
       </Content>
 

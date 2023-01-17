@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Tooltip } from '../../tooltip/tooltip';
+
 export const Container = styled.div`
   background: ${({ theme }) => theme.primary_light};
   border-radius: 8px;
@@ -13,9 +15,20 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
 
-  svg {
-    margin-right: 16px;
+  & + div {
+    margin-top: 8px;
   }
+
+  svg {
+    margin-right: 9px;
+    height: 100%;
+  }
+
+  ${props =>
+    props.isErrored &&
+    css`
+      border-color: ${propsTheme => propsTheme.theme.error_title};
+    `}
 
   ${props =>
     props.isFocused &&
@@ -43,5 +56,18 @@ export const Container = styled.div`
     & + input {
       margin-top: 8px;
     }
+  }
+`;
+
+export const Error = styled(Tooltip)`
+  margin-left: 16px;
+  height: 20px;
+
+  svg {
+    margin: 0;
+  }
+
+  span {
+    background: ${propsTheme => propsTheme.theme.error_title};
   }
 `;

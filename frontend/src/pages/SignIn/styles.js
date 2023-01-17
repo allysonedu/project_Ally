@@ -48,7 +48,8 @@ export const Content = styled.div`
     display: block;
     text-decoration: none;
     font-weight: bold;
-    color: ${({ theme }) => theme.text};
+    height: 16px;
+    color: black;
 
     transition: all 0.2;
   }

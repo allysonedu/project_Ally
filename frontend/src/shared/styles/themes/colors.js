@@ -4,11 +4,11 @@ export default {
   primary_light: 'rgb(29, 143, 242, 0.7)',
 
   secondary: '#29C7D9',
-  secondary_light: 'rgb(41, 199, 255, 0.4)',
+  secondary_light: 'rgb(41, 199, 217, 0.2)',
 
-  text: 'black',
+  text: '#16498C ',
   background: '#F2F2F2',
-  content: 'rgba(13, 13, 13, 0.3)',
+  content: 'rgba(13, 13, 13, 0.9)',
 
   success_title: '#2e656a',
   success_background: '#e6fffa',

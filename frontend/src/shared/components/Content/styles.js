@@ -8,4 +8,6 @@ export const Container = styled.div`
   color: ${({ theme }) => theme.text};
 
   background: rgba(13, 13, 13, 0.5);
+
+  padding: 16px;
 `;

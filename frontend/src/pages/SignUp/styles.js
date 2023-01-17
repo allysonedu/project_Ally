@@ -13,14 +13,14 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to right, #040f15, #08182f, #112955, #040f15);
+  background: linear-gradient(to left, #040f15, #08182f, #112955);
   height: 100%;
 
   width: 100%;
   max-width: 100%;
 
   img {
-    width: 200px;
+    width: 230px;
   }
 
   form {
@@ -35,7 +35,9 @@ export const Content = styled.div`
   }
 
   button {
-    margin-top: 17px;
+  }
+
+  input {
   }
 
   h1 {
@@ -45,7 +47,7 @@ export const Content = styled.div`
   > a {
     color: ${({ theme }) => theme.primary};
     display: block;
-    margin-top: 24px;
+    margin-top: 5px;
     text-decoration: none;
 
     transition: all 0.2;
