@@ -1,70 +1,158 @@
-# Getting Started with Create React App
+ <h1 align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <img src="https://ik.imagekit.io/hlucs8as0/logoo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674424892653">
+ </h1>
 
-## Available Scripts
+ <h1> 
+ <img src="https://ik.imagekit.io/hlucs8as0/inicill.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674425081579">
+ 
+ </h1>
 
-In the project directory, you can run:
+## 🔍 index
 
-### `yarn start`
+- [Start screen](#-Start-screen)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Part of registration](#-Part-of-registration)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [ Part of login](Part-of-login)
 
-### `yarn test`
+- [Part of Home](Part-of-Home)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ Part of registration](Part-of-registration)
 
-### `yarn build`
+- [Assisted form](Assisted-form)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [ technologies-used](technologies-used)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [ How to download the project](How-to-download-the-project)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `yarn eject`
+## 🛡️ Start screen
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+here where it shows the type of user you are !
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Admin
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **secretaria**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### finaceiros
 
-## Learn More
+only the **secretary** is still a feature, so access it!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+<h1>
+ <img src="https://ik.imagekit.io/hlucs8as0/cadastro.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674425106145">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ </h1>
 
-### Analyzing the Bundle Size
+## 📝 Part of registration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+here you put your credentials to be able to register!
+<br>
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br>
 
-### Advanced Configuration
+<h1> 
+ <img src="https://ik.imagekit.io/hlucs8as0/loginn.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674425174087">
+ </h1>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📱 Part of login
 
-### Deployment
+here you have to put the credentials that you use in the registration part!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<br>
 
-### `yarn build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br>
+
+<h1>
+ <img src="https://ik.imagekit.io/hlucs8as0/homee.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674425174228">
+ </h1>
+
+## 🏡 Part of Home
+
+so... doing everything right you access the home part
+
+<br>
+
+---
+
+<br>
+
+<img src="https://ik.imagekit.io/hlucs8as0/partedecadastro.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674425173877">
+
+<br>
+
+## 👨‍👨‍👦 Part of registration
+
+part of the assisted registration!
+
+<br>
+
+---
+
+<br>
+
+<img src="https://ik.imagekit.io/hlucs8as0/formulariodoassistido.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674425174166">
+
+## 👨🏻 Assisted form
+
+here is where the assisted form "registered persons" is located
+
+<br>
+
+---
+
+<br >
+
+<br>
+
+---
+
+## 🖥️ technologies used
+
+The project was developed using the following technologies
+
+- Javascript
+- Nodejs
+- SQL Server
+- ReactJS
+- Postgres
+
+---
+
+<br>
+
+## ⬇️ How to download the project
+
+```bash
+# Clone the repository
+$ git clone https://github.com/allysonedu/project_Ally.git
+
+# Enter the directory
+$ cd project_Ally
+
+# Install the dependencies
+$ yarn install
+
+# start the project
+$ yarn start
+
+```
+
+---
+
+<br>
+
+<br>
+
+## 🛩️ The end
+
+we have reached the end thank you very much for visiting my application 😁!

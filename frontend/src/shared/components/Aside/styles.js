@@ -3,13 +3,16 @@ import styled from 'styled-components';
 export const Container = styled.div`
   grid-area: AS;
 
-  background: rgb(29, 143, 242, 0.4);
+  background: rgb(29, 143, 242, 0.5);
+  border: 4px solid rgb(29, 143, 242, 0.9);
+  border-radius: 8px;
+
   color: ${({ theme }) => theme.text};
 
   hr {
     margin: 35px auto;
     height: 1px;
-    width: 90%;
+    width: 100%;
     background-color: black;
     opacity: 0.2;
   }
@@ -25,6 +28,7 @@ export const ProfileContent = styled.div`
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    padding-right: 5px;
   }
 `;
 export const ProfileInfo = styled.div`

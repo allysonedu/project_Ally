@@ -12,7 +12,7 @@ module.exports = async (request, response, next) => {
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    request.person = {
+    request.user = {
       id: decoded.id,
     };
 

@@ -32,7 +32,7 @@ routes.use('/secretary_login', sessionsSecretaryRoutes);
 
 routes.use(ensureAuthenticated);
 
-routes.use('/assisted', assistedsRoutes);
+routes.use('/assisteds', assistedsRoutes);
 
 routes.use('/donation_type', typeRoutes);
 

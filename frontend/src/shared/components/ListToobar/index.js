@@ -1,23 +1,26 @@
-import { useCallback } from 'react';
-
 import { Form } from '@unform/web';
 
-import { FiSearch } from 'react-icons/fi';
+import { FiSearch, FiCheck } from 'react-icons/fi';
+
+import { BiUserPlus } from 'react-icons/bi';
 
 import { Input, Button } from '../';
 
 import { Container } from './styles';
 
-export const ListToolbar = () => {
-  const handleSubmit = useCallback(() => {
-    console.log('handleSubmit');
-  }, []);
+export const ListToolbar = ({ handleSearch, handleNew }) => {
   return (
     <Container>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSearch}>
         <Input name="search" type="text" icon={FiSearch} />
-        <Button type="submit"></Button>
+        <Button type="submit">
+          <FiCheck />
+        </Button>
       </Form>
+      <Button type="button" onClick={() => handleNew('new', 1)}>
+        <BiUserPlus size={24} styles={{ marginRight: '10px' }} />
+        Novo Assistido
+      </Button>
     </Container>
   );
 };

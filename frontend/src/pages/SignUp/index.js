@@ -108,7 +108,7 @@ export const SignUp = () => {
 
         <a href="/login">
           <FiArrowRight size={20} />
-          Já tenho uma conta, fazer logon
+          Já tenho uma conta, fazer login
         </a>
       </Content>
 

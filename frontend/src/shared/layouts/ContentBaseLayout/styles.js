@@ -6,8 +6,9 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled.div`
-  font-size: 24px;
+export const Title = styled.h1`
+  font-size: 35px;
+  color: black;
 `;
 
 export const Content = styled.div`

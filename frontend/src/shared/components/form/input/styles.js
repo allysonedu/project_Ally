@@ -50,7 +50,7 @@ export const Container = styled.div`
     font-size: 14px;
 
     &::placeholder {
-      color: rgb(41, 199, 255, 0.9);
+      color: black;
     }
 
     & + input {

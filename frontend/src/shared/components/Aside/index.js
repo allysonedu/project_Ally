@@ -29,14 +29,17 @@ export const Aside = () => {
               Home
             </a>
 
-            <a href="/assistido" onClick={() => navigate('/home')}>
+            <a href="/assistidos" onClick={() => navigate('/home')}>
               <BiUser size={20} />
-              Assistido
+              Criar Assistido
             </a>
 
-            <a href="/find-assistido" onClick={() => navigate('/home')}>
+            <a
+              href="/find-assistido"
+              onClick={() => navigate('/find-assistido')}
+            >
               <FiSearch size={18} />
-              Encontrar usuario
+              Encontrar Assistido
             </a>
 
             <hr />

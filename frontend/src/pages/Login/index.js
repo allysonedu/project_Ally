@@ -78,7 +78,7 @@ export const Login = () => {
         <img src={logo} alt="Ally" />
 
         <Form ref={formRef} onSubmit={handleSubmit}>
-          <h1>Faça seu logon</h1>
+          <h1>Faça seu login</h1>
 
           <Input
             name="email"

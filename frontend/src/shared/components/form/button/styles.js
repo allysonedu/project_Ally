@@ -7,6 +7,8 @@ export const Container = styled.button`
   padding: 14px;
   width: 100%;
   font-weight: bold;
+  align-items: center;
+  text-align: center;
 
   transition: transform 0.8s blue, background-color 0.3s blue;
 

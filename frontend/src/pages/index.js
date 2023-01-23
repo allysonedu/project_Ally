@@ -9,3 +9,5 @@ export * from './Home';
 export * from './FindAssistido';
 
 export * from './Assistido';
+
+export * from './AssistedsDetails';

@@ -6,6 +6,7 @@ import {
   Login,
   Home,
   Assistido,
+  AssistedsDetails,
   FindAssistido,
 } from '../../pages';
 
@@ -33,10 +34,19 @@ export const AppRoutes = () => {
         />
 
         <Route
-          path="/assistido"
+          path="/assistidos"
           element={
             <Layout>
               <Assistido />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/assisteds/:id"
+          element={
+            <Layout>
+              <AssistedsDetails />
             </Layout>
           }
         />
