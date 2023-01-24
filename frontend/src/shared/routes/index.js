@@ -1,13 +1,13 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import {
-  SignIn,
+  TypeUser,
   SignUp,
   Login,
   Home,
-  Assistido,
+  Assisteds,
+  FormAssisteds,
   AssistedsDetails,
-  FindAssistido,
 } from '../../pages';
 
 import { PrivateRoutes } from './PrivateRoutes';
@@ -17,7 +17,7 @@ import { Layout } from '../components';
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<SignIn />} />
+      <Route path="/" element={<TypeUser />} />
 
       <Route path="/sign-up" element={<SignUp />} />
 
@@ -37,7 +37,7 @@ export const AppRoutes = () => {
           path="/assistidos"
           element={
             <Layout>
-              <Assistido />
+              <Assisteds />
             </Layout>
           }
         />
@@ -54,7 +54,7 @@ export const AppRoutes = () => {
           path="/find-assistido"
           element={
             <Layout>
-              <FindAssistido />
+              <FormAssisteds />
             </Layout>
           }
         />

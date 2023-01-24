@@ -24,7 +24,7 @@ import { useToast } from '../../shared/context/ToastContext';
 
 import { Container, ActionsButto } from './styles';
 
-export const FindAssistido = () => {
+export const FormAssisteds = () => {
   const { addToast } = useToast();
   const [assisteds, setAssisteds] = useState([]);
   const [assistedId, setAssistedId] = useState(null);

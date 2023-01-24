@@ -6,7 +6,7 @@ import { Button } from '../../shared/components';
 
 import { Link } from 'react-router-dom';
 
-export const SignIn = () => {
+export const TypeUser = () => {
   return (
     <Container>
       <Content>

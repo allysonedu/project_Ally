@@ -1,4 +1,4 @@
-export * from './SignIn';
+export * from './TypeUser';
 
 export * from './SignUp';
 
@@ -6,8 +6,8 @@ export * from './Login';
 
 export * from './Home';
 
-export * from './FindAssistido';
+export * from './FormAssisteds';
 
-export * from './Assistido';
+export * from './Assisteds';
 
 export * from './AssistedsDetails';

@@ -20,7 +20,7 @@ import { createAssisted } from '../../api/allyApi';
 
 import { Container, FormContent } from './styles';
 
-export const Assistido = () => {
+export const Assisteds = () => {
   const formRef = useRef(null);
   const navigate = useNavigate();
   const { addToast } = useToast;
